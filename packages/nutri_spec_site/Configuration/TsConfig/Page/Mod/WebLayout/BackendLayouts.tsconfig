@@ -1,0 +1,4 @@
+#
+# BACKENDLAYOUTS
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:nutri_spec_site/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts" extensions="tsconfig">

@@ -1,0 +1,28 @@
+{
+    "name": "groupproject/nutrispec-app",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Kunal Harkare",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "GroupProject\\NutrispecApp\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GroupProject\\NutrispecApp\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "groupproject/nutrispec-app": "self.version",
+        "typo3-ter/nutrispec-app": "self.version"
+    }
+}

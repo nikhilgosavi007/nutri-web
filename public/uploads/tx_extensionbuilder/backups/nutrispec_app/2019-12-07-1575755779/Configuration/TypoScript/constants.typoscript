@@ -1,0 +1,15 @@
+
+plugin.tx_nutrispecapp_nutrispec {
+    view {
+        # cat=plugin.tx_nutrispecapp_nutrispec/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:nutrispec_app/Resources/Private/Templates/
+        # cat=plugin.tx_nutrispecapp_nutrispec/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:nutrispec_app/Resources/Private/Partials/
+        # cat=plugin.tx_nutrispecapp_nutrispec/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:nutrispec_app/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_nutrispecapp_nutrispec//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

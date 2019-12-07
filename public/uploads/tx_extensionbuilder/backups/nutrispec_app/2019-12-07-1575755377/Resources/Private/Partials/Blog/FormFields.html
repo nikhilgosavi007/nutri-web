@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="title">
+	<f:translate key="tx_nutrispecapp_domain_model_blog.title" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="title" /><br />
+<label for="author">
+	<f:translate key="tx_nutrispecapp_domain_model_blog.author" />
+</label><br />
+	<f:form.textfield property="author" /><br />
+<label for="date">
+	<f:translate key="tx_nutrispecapp_domain_model_blog.date" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="date" value="{blog.date->f:format.date()}" /><br />
+<label for="description">
+	<f:translate key="tx_nutrispecapp_domain_model_blog.description" />
+</label><br />
+	<f:form.textarea property="description" cols="40" rows="15" /><br />
+<label for="article">
+	<f:translate key="tx_nutrispecapp_domain_model_blog.article" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textarea property="article" cols="40" rows="15" /><br />
+</html>
