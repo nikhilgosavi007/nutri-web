@@ -31,7 +31,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <th> </th>
         </tr>
 
-        <f:for each="{clientss}" as="clients">
+        <f:for each="{clients}" as="clients">
             <tr>
                 <td><f:link.action action="show" arguments="{clients : clients}">{clients.name}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{clients : clients}">{clients.email}</f:link.action></td>

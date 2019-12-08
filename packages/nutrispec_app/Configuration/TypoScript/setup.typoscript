@@ -1,5 +1,5 @@
 
-plugin.tx_nutrispecapp_nutrispec {
+plugin.tx_nutrispecapp {
     view {
         templateRootPaths.0 = EXT:nutrispec_app/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_nutrispecapp_nutrispec.view.templateRootPath}
