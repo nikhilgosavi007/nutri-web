@@ -13,10 +13,21 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <h1>Listing for Clients</h1>
-
-    <f:flashMessages />
-
+    <div class="row">
+        <div class="col-6">
+            <h1>Listing for Clients</h1>
+        </div>
+        <div class="col-6">
+            <f:form action="list" controller="Clients" method="post">
+                <f:form.textfield name="search" value="{search}" placeholder="search" class="form-control" />
+            </f:form>
+        </div>
+    </div>
+    <f:if condition="{search}">
+        <div class="alert alert-info">
+            Searched for "{search}", found {clients -> f:count()} results
+        </div>
+    </f:if>
     <table  class="tx_nutrispecapp" >
         <tr>
             <th><f:translate key="tx_nutrispecapp_domain_model_clients.name" /></th>

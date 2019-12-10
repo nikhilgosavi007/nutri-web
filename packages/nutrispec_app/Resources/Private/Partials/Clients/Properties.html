@@ -61,7 +61,15 @@
 			<f:translate key="tx_nutrispecapp_domain_model_clients.photo" />
 		</td>
 		<td>
-				<f:image src="{clients.photo.originalResource.publicUrl}" width="200"/>
+			<f:if condition="{clients.photo}">
+				<f:then>
+					<f:image src="{clients.photo.originalResource.publicUrl}" width="200"/>
+				</f:then>
+				<f:else>
+					No photo given....
+				</f:else>
+			</f:if>
+
 		</td>
 	</tr>
 </table>

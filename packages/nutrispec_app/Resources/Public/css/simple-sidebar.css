@@ -1,0 +1,73 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+/*body {
+  overflow-x: hidden;
+}*/
+
+.homePage {
+  margin: 0;
+  overflow: hidden;
+  height:100%;
+}
+
+#leftSection {
+  height:100%;
+}
+
+#rightSection {
+  height:100%;
+}
+
+#client-sidebar-wrapper {
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#client-sidebar-wrapper .sidebar-heading {
+  font-size: 1.2rem;
+}
+
+/*#client-sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#client-page-content-wrapper {
+  min-width: 100vw;
+}
+
+#client-wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}*/
+
+@media (min-width: 768px) {
+  #client-sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #client-page-content-wrapper {
+    min-width: 0;
+  }
+
+  #client-wrapper.toggled #client-sidebar-wrapper {
+    margin-left: -15rem;
+  }
+  #leftSection {
+    position: absolute;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+  }
+  #rightSection {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    overflow-y: scroll;
+  }
+}

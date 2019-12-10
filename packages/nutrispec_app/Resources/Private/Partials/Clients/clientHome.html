@@ -1,0 +1,94 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:section name="HeaderAssets">
+    <link rel="stylesheet" href="{f:uri.resource(path: 'css/simple-sidebar.css')}"/>
+</f:section>
+
+<div class="homePage">
+
+    <div class="row">
+        <div class="col-sm-8" id="leftSection">
+
+            <div class="d-flex" id="client-wrapper">
+
+                <!-- Sidebar -->
+                <div class="bg-light border-right" id="client-sidebar-wrapper">
+                    <div class="list-group list-group-flush">
+
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Diet Plan</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Reports</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
+                        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+                    </div>
+                </div>
+                <!-- /#sidebar-wrapper -->
+
+                <!-- Page Content -->
+                <div id="client-page-content-wrapper">
+
+                    <!--<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Link</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Dropdown
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>-->
+
+                    <div class="container-fluid">
+                        <h2 class="mt-4">Welcome {clients.name}</h2>
+                        <p>Your current profile</p>
+
+                        <p><h6>Age: {clients.age}</h6></p>
+                        <p><h6>Height: {clients.height}</h6></p>
+                        <p><h6>Weight: {clients.weight}</h6></p>
+                        <p><h6>BMI: {clients.bmi}</h6></p>
+                        <p><h6>Blood group: {clients.bloodgroup}</h6></p>
+                    </div>
+                </div>
+                <!-- /#page-content-wrapper -->
+
+            </div>
+
+        </div>
+        <div class="col-sm-4" id="rightSection">
+
+            <h4>BLOGS</h4>
+
+            <f:for each="{blogs}" as="blog">
+                <f:format.html>
+                    <h5><strong>{blog.title}</strong></h5>
+                    <p>{blog.article}</p>
+                    <br/>
+                </f:format.html>
+
+            </f:for>
+        </div>
+
+    </div>
+
+
+</div>
+
+</html>

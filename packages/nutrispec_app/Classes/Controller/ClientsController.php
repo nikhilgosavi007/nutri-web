@@ -26,6 +26,13 @@ class ClientsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     protected $clientsRepository = null;
 
     /**
+     * blogRepository
+     *
+     * @var \GroupProject\NutrispecApp\Domain\Repository\BlogRepository
+     */
+    protected $blogRepository = null;
+
+    /**
      * @param \GroupProject\NutrispecApp\Domain\Repository\ClientsRepository $clientsRepository
      */
     public function injectClientsRepository(\GroupProject\NutrispecApp\Domain\Repository\ClientsRepository $clientsRepository)
@@ -34,13 +41,27 @@ class ClientsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     }
 
     /**
+     * @param \GroupProject\NutrispecApp\Domain\Repository\BlogRepository $blogRepository
+     */
+    public function injectBlogRepository(\GroupProject\NutrispecApp\Domain\Repository\BlogRepository $blogRepository)
+    {
+        $this->blogRepository = $blogRepository;
+    }
+
+    /**
      * action list
      * 
-     * @return void
+     * @return string $search
      */
-    public function listAction()
+    public function listAction(string $search = null)
     {
-        $clients = $this->clientsRepository->findAll();
+
+        if($search == null){
+            $clients = $this->clientsRepository->findAll();
+        } else {
+            $clients = $this->clientsRepository->findBySearch($search);
+        }
+        $this->view->assign('search',$search);
         $this->view->assign('clients', $clients);
     }
 
@@ -52,7 +73,10 @@ class ClientsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      */
     public function showAction(\GroupProject\NutrispecApp\Domain\Model\Clients $clients)
     {
+        $blog = $this->blogRepository->findAll();
         $this->view->assign('clients', $clients);
+        $this->view->assign('blogs',$blog);
+
     }
 
     /**
