@@ -260,6 +260,17 @@
                             "propertyName": "photo",
                             "propertyType": "Image",
                             "uid": "1014877633364"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "gender",
+                            "propertyType": "String",
+                            "uid": "1504953541574"
                         }
                     ]
                 },
@@ -479,6 +490,28 @@
                             "propertyName": "report",
                             "propertyType": "String",
                             "uid": "210656881752"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "date",
+                            "propertyType": "NativeDateTime",
+                            "uid": "284447208936"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": false,
+                            "propertyName": "instructions",
+                            "propertyType": "RichText",
+                            "uid": "1555606105059"
                         }
                     ]
                 },
@@ -616,7 +649,7 @@
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2019-12-07 09:56",
+        "last_modified": "2019-12-13 08:30",
         "extension_builder_version": "9.10.2",
         "be_user": " (1)"
     }

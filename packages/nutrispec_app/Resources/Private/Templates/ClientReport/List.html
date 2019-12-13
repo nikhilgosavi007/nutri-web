@@ -21,6 +21,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
         <tr>
             <th><f:translate key="tx_nutrispecapp_domain_model_clientreport.title" /></th>
             <th><f:translate key="tx_nutrispecapp_domain_model_clientreport.report" /></th>
+            <th><f:translate key="tx_nutrispecapp_domain_model_clientreport.date" /></th>
+            <th><f:translate key="tx_nutrispecapp_domain_model_clientreport.instructions" /></th>
             <th> </th>
             <th> </th>
         </tr>
@@ -29,6 +31,8 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <tr>
                 <td><f:link.action action="show" arguments="{clientReport : clientReport}">{clientReport.title}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{clientReport : clientReport}">{clientReport.report}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{clientReport : clientReport}">{clientReport.date -> f:format.date()}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{clientReport : clientReport}">{clientReport.instructions}</f:link.action></td>
                 <td><f:link.action action="edit" arguments="{clientReport : clientReport}">Edit</f:link.action></td>
                 <td><f:link.action action="delete" arguments="{clientReport : clientReport}">Delete</f:link.action></td>
             </tr>

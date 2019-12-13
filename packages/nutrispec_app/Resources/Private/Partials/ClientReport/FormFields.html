@@ -7,4 +7,12 @@
 	<f:translate key="tx_nutrispecapp_domain_model_clientreport.report" />
 </label><br />
 	<f:form.textfield property="report" /><br />
+<label for="date">
+	<f:translate key="tx_nutrispecapp_domain_model_clientreport.date" />
+</label><br />
+	<f:form.textfield property="date" value="{clientReport.date->f:format.date()}" /><br />
+<label for="instructions">
+	<f:translate key="tx_nutrispecapp_domain_model_clientreport.instructions" />
+</label><br />
+	<f:form.textarea property="instructions" cols="40" rows="15" /><br />
 </html>

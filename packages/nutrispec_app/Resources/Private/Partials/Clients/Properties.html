@@ -57,19 +57,21 @@
 		</td>
 	</tr>
 	<tr>
+		<f:if condition="{clients.photo}">
+			<f:then>
+				<f:image src="{clients.photo.originalResource.publicUrl}" width="200"/>
+			</f:then>
+			<f:else>
+				No photo given....
+			</f:else>
+		</f:if>
+	</tr>
+	<tr>
 		<td>
-			<f:translate key="tx_nutrispecapp_domain_model_clients.photo" />
+			<f:translate key="tx_nutrispecapp_domain_model_clients.gender" />
 		</td>
 		<td>
-			<f:if condition="{clients.photo}">
-				<f:then>
-					<f:image src="{clients.photo.originalResource.publicUrl}" width="200"/>
-				</f:then>
-				<f:else>
-					No photo given....
-				</f:else>
-			</f:if>
-
+		{clients.gender}
 		</td>
 	</tr>
 </table>

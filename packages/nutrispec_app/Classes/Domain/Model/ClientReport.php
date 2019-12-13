@@ -47,6 +47,20 @@ class ClientReport extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $nutritionist = null;
 
     /**
+     * date
+     * 
+     * @var \DateTime
+     */
+    protected $date = null;
+
+    /**
+     * instructions
+     * 
+     * @var string
+     */
+    protected $instructions = '';
+
+    /**
      * Returns the title
      * 
      * @return string $title
@@ -128,5 +142,47 @@ class ClientReport extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setNutritionist(\GroupProject\NutrispecApp\Domain\Model\Nutritionist $nutritionist)
     {
         $this->nutritionist = $nutritionist;
+    }
+
+    /**
+     * Returns the date
+     * 
+     * @return \DateTime $date
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Sets the date
+     * 
+     * @param \DateTime $date
+     * @return void
+     */
+    public function setDate(\DateTime $date)
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * Returns the instructions
+     * 
+     * @return string $instructions
+     */
+    public function getInstructions()
+    {
+        return $this->instructions;
+    }
+
+    /**
+     * Sets the instructions
+     * 
+     * @param string $instructions
+     * @return void
+     */
+    public function setInstructions($instructions)
+    {
+        $this->instructions = $instructions;
     }
 }

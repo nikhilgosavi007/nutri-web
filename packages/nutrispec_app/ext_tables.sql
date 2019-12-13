@@ -27,7 +27,8 @@ CREATE TABLE tx_nutrispecapp_domain_model_clients (
 	weight int(11) DEFAULT '0' NOT NULL,
 	bloodgroup varchar(255) DEFAULT '' NOT NULL,
 	bmi int(11) DEFAULT '0' NOT NULL,
-	photo int(11) unsigned NOT NULL default '0'
+	photo int(11) unsigned NOT NULL default '0',
+	gender varchar(255) DEFAULT '' NOT NULL
 
 );
 
@@ -61,6 +62,8 @@ CREATE TABLE tx_nutrispecapp_domain_model_clientreport (
 
 	title varchar(255) DEFAULT '' NOT NULL,
 	report varchar(255) DEFAULT '' NOT NULL,
+	date datetime DEFAULT NULL,
+	instructions text,
 	client int(11) unsigned DEFAULT '0',
 	nutritionist int(11) unsigned DEFAULT '0'
 

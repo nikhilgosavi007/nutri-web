@@ -77,6 +77,57 @@ class ClientReportTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
+    public function getDateReturnsInitialValueForDateTime()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getDate()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setDateForDateTimeSetsDate()
+    {
+        $dateTimeFixture = new \DateTime();
+        $this->subject->setDate($dateTimeFixture);
+
+        self::assertAttributeEquals(
+            $dateTimeFixture,
+            'date',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getInstructionsReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getInstructions()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setInstructionsForStringSetsInstructions()
+    {
+        $this->subject->setInstructions('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'instructions',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getClientReturnsInitialValueForClients()
     {
         self::assertEquals(

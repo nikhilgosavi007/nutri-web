@@ -16,7 +16,6 @@ call_user_func(
             'Nutrispec_Nutritionist_List',
             'Nutritionists List'
         );
-
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'GroupProject.NutrispecApp',
             'Nutrispec_Client_List',

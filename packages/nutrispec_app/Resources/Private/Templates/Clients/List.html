@@ -13,21 +13,10 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <div class="row">
-        <div class="col-6">
-            <h1>Listing for Clients</h1>
-        </div>
-        <div class="col-6">
-            <f:form action="list" controller="Clients" method="post">
-                <f:form.textfield name="search" value="{search}" placeholder="search" class="form-control" />
-            </f:form>
-        </div>
-    </div>
-    <f:if condition="{search}">
-        <div class="alert alert-info">
-            Searched for "{search}", found {clients -> f:count()} results
-        </div>
-    </f:if>
+    <h1>Listing for Clients</h1>
+
+    <f:flashMessages />
+
     <table  class="tx_nutrispecapp" >
         <tr>
             <th><f:translate key="tx_nutrispecapp_domain_model_clients.name" /></th>
@@ -38,6 +27,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <th><f:translate key="tx_nutrispecapp_domain_model_clients.bloodgroup" /></th>
             <th><f:translate key="tx_nutrispecapp_domain_model_clients.bmi" /></th>
             <th><f:translate key="tx_nutrispecapp_domain_model_clients.photo" /></th>
+            <th><f:translate key="tx_nutrispecapp_domain_model_clients.gender" /></th>
             <th> </th>
             <th> </th>
         </tr>
@@ -52,6 +42,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <td><f:link.action action="show" arguments="{clients : clients}">{clients.bloodgroup}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{clients : clients}">{clients.bmi}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{clients : clients}">{clients.photo.originalResource.name}</f:link.action></td>
+                <td><f:link.action action="show" arguments="{clients : clients}">{clients.gender}</f:link.action></td>
                 <td><f:link.action action="edit" arguments="{clients : clients}">Edit</f:link.action></td>
                 <td><f:link.action action="delete" arguments="{clients : clients}">Delete</f:link.action></td>
             </tr>

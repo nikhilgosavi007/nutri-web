@@ -1,7 +1,6 @@
 <?php
 namespace GroupProject\NutrispecApp\Domain\Repository;
 
-
 use GroupProject\NutrispecApp\Domain\Model\Clients;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 
@@ -20,29 +19,22 @@ use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
  */
 class ClientsRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+
     /**
      * @param string $search
      * @return array|QueryResultInterface|Clients[]
      */
-    public function findBySearch(string $search){
-
+    public function findBySearch(string $search)
+    {
         $query = $this->createQuery();
-
         $constraints = [];
-
         $constraints = $query->like('name', '%' . $search . '%');
         $constraints = $query->like('email', '%' . $search . '%');
         $constraints = $query->like('height', '%' . $search . '%');
         $constraints = $query->like('weight', '%' . $search . '%');
         $constraints = $query->like('bmi', '%' . $search . '%');
         $constraints = $query->like('age', '%' . $search . '%');
-
-        $query->matching(
-            $query->logicalOr(
-                $constraints
-            )
-        );
-
+        $query->matching($query->logicalOr($constraints));
         return $query->execute();
     }
 }

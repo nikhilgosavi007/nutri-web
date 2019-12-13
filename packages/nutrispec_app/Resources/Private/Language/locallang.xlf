@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:nutrispec_app/Resources/Private/Language/locallang" date="2019-12-07T21:56:18Z" product-name="nutrispec_app">
+	<file source-language="en" datatype="plaintext" original="EXT:nutrispec_app/Resources/Private/Language/locallang" date="2019-12-13T20:30:33Z" product-name="nutrispec_app">
 		<header/>
 		<body>
 			<trans-unit id="tx_nutrispecapp_domain_model_nutritionist" resname="tx_nutrispecapp_domain_model_nutritionist">
@@ -60,6 +60,9 @@
 			<trans-unit id="tx_nutrispecapp_domain_model_clients.photo" resname="tx_nutrispecapp_domain_model_clients.photo">
 				<source>Photo</source>
 			</trans-unit>
+			<trans-unit id="tx_nutrispecapp_domain_model_clients.gender" resname="tx_nutrispecapp_domain_model_clients.gender">
+				<source>Gender</source>
+			</trans-unit>
 			<trans-unit id="tx_nutrispecapp_domain_model_blog" resname="tx_nutrispecapp_domain_model_blog">
 				<source>Blog</source>
 			</trans-unit>
@@ -95,6 +98,12 @@
 			</trans-unit>
 			<trans-unit id="tx_nutrispecapp_domain_model_clientreport.report" resname="tx_nutrispecapp_domain_model_clientreport.report">
 				<source>Report</source>
+			</trans-unit>
+			<trans-unit id="tx_nutrispecapp_domain_model_clientreport.date" resname="tx_nutrispecapp_domain_model_clientreport.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_nutrispecapp_domain_model_clientreport.instructions" resname="tx_nutrispecapp_domain_model_clientreport.instructions">
+				<source>Instructions</source>
 			</trans-unit>
 			<trans-unit id="tx_nutrispecapp_domain_model_clientreport.client" resname="tx_nutrispecapp_domain_model_clientreport.client">
 				<source>Client</source>

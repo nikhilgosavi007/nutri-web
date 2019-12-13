@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'title,report',
+        'searchFields' => 'title,report,instructions',
         'iconfile' => 'EXT:nutrispec_app/Resources/Public/Icons/tx_nutrispecapp_domain_model_clientreport.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, report, client, nutritionist',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, report, date, instructions, client, nutritionist',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, report, client, nutritionist, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, report, date, instructions, client, nutritionist, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -133,6 +133,36 @@ return [
                 'size' => 30,
                 'eval' => 'trim'
             ],
+        ],
+        'date' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:nutrispec_app/Resources/Private/Language/locallang_db.xlf:tx_nutrispecapp_domain_model_clientreport.date',
+            'config' => [
+                'dbType' => 'datetime',
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'size' => 12,
+                'eval' => 'datetime',
+                'default' => null,
+            ],
+        ],
+        'instructions' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:nutrispec_app/Resources/Private/Language/locallang_db.xlf:tx_nutrispecapp_domain_model_clientreport.instructions',
+            'config' => [
+                'type' => 'text',
+                'enableRichtext' => true,
+                'richtextConfiguration' => 'default',
+                'fieldControl' => [
+                    'fullScreenRichtext' => [
+                        'disabled' => false,
+                    ],
+                ],
+                'cols' => 40,
+                'rows' => 15,
+                'eval' => 'trim',
+            ],
+            
         ],
         'client' => [
             'exclude' => true,
