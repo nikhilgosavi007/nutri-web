@@ -1,0 +1,40 @@
+base: 'http://nutrispec.ddev.site/'
+baseVariants:
+  -
+    base: 'http://nutrispec.ddev.site/'
+    condition: 'getenv("DDEV_PROJECT") == "NutriSpec"'
+errorHandling: {  }
+languages:
+  -
+    title: English
+    enabled: true
+    base: /en/
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-US
+    direction: ltr
+    flag: en-us-gb
+    languageId: '0'
+rootPageId: 1
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\n"
+
+routeEnhancers:
+  Nutrispec_Nutritionist_List:
+    type: Extbase
+    extension: NutrispecApp
+    plugin: Nutrispec_Nutritionist_List
+    defaultController: 'Nutritionist::list'
+    routes:
+      - { _controller: 'Nutritionist::list', routePath: '/nutritionist/list' }
+      - { _controller: 'Nutritionist::show', routePath: '/nutritionist/show/{nutritionist}' }
+    aspects:
+      nutritionist:
+        type: PersistedAliasMapper
+        tableName: 'tx_nutrispecapp_domain_model_nutritionist'
+        routeFieldName: 'uid'

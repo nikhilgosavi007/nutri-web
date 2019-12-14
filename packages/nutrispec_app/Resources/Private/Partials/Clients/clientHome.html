@@ -15,7 +15,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{nutritionist.name}</h5>
                         <p class="card-text"><f:format.html>{nutritionist.about}</f:format.html></p>
-                        <a href="#" class="btn btn-primary">Visit Profile</a>
+                        <f:link.action action="show" arguments="{nutritionist : nutritionist}" controller="Nutritionist"><button type="button" class="btn btn-primary">Visit Profile</button></f:link.action>
                     </div>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
