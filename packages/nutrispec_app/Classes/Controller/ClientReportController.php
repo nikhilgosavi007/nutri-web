@@ -2,6 +2,8 @@
 namespace GroupProject\NutrispecApp\Controller;
 
 
+use GroupProject\NutrispecApp\Domain\Model\ClientReport;
+
 /***
  *
  * This file is part of the "NutriSpec App" Extension for TYPO3 CMS.
@@ -114,4 +116,25 @@ class ClientReportController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $this->clientReportRepository->remove($clientReport);
         $this->redirect('list');
     }
+
+    /**
+     * action delete
+     *
+     * @param \GroupProject\NutrispecApp\Domain\Model\Clients $clients
+     * @return void
+     */
+    public function associateAction(\GroupProject\NutrispecApp\Domain\Model\Clients $clients,\GroupProject\NutrispecApp\Domain\Model\Nutritionist $nutritionist)
+    {
+        $newClientReportAssociation = new ClientReport();
+        $newClientReportAssociation->setDate(new \DateTime());
+        $newClientReportAssociation->setTitle("My Title");
+        $newClientReportAssociation->setInstructions("My Instrutions");
+        $newClientReportAssociation->setReport("My Report");
+        $newClientReportAssociation->setClient($clients);
+        $newClientReportAssociation->setNutritionist($nutritionist);
+        $this->addFlashMessage('The object was created. Please be aware that this action is publicly accessible unless you implement an access check. See https://docs.typo3.org/typo3cms/extensions/extension_builder/User/Index.html', '', \TYPO3\CMS\Core\Messaging\AbstractMessage::WARNING);
+        $this->clientReportRepository->add($newClientReportAssociation);
+        $this->redirect('list');
+    }
+
 }

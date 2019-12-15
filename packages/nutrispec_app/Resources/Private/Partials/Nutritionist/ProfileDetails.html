@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<h1>Profile Details</h1>
+
+<h3>Client</h3>
+<table class="tx-nutrispec-app" >
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            {client.name}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email
+        </td>
+        <td>
+            {client.email}
+        </td>
+    </tr>
+</table>
+
+<h3>Nutritionist</h3>
+<table class="tx-nutrispec-app" >
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            {nutritionist.name}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email
+        </td>
+        <td>
+            {nutritionist.email}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Qualification
+        </td>
+        <td>
+            {nutritionist.qualification}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Ratings
+        </td>
+        <td>
+            {nutritionist.ratings}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            About
+        </td>
+        <td>
+            {nutritionist.about}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Services
+        </td>
+        <td>
+            {nutritionist.services}
+        </td>
+    </tr>
+</table>
+<f:link.action action="associate" arguments="{nutritionist : nutritionist, clients : client}" controller="ClientReport"><button type="button" class="btn btn-primary">Associate</button></f:link.action>
+</html>

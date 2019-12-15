@@ -114,4 +114,16 @@ class NutritionistController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionCon
         $this->nutritionistRepository->remove($nutritionist);
         $this->redirect('list');
     }
+
+    /**
+     * action delete
+     *
+     * @param \GroupProject\NutrispecApp\Domain\Model\Nutritionist $nutritionist
+     * @return void
+     */
+    public function profileAction(\GroupProject\NutrispecApp\Domain\Model\Nutritionist $nutritionist, \GroupProject\NutrispecApp\Domain\Model\Clients $client)
+    {
+        $this->view->assign('nutritionist', $nutritionist);
+        $this->view->assign('client', $client);
+    }
 }

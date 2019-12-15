@@ -38,3 +38,17 @@ routeEnhancers:
         type: PersistedAliasMapper
         tableName: 'tx_nutrispecapp_domain_model_nutritionist'
         routeFieldName: 'uid'
+
+  Nutrispec_Client_List:
+    type: Extbase
+    extension: NutrispecApp
+    plugin: Nutrispec_Client_List
+    defaultController: 'Clients::list'
+    routes:
+      - { _controller: 'Clients::list', routePath: '/clients/list' }
+      - { _controller: 'Clients::show', routePath: '/clients/show/{client}' }
+    aspects:
+      client:
+        type: PersistedAliasMapper
+        tableName: 'tx_nutrispecapp_domain_model_clients'
+        routeFieldName: 'uid'

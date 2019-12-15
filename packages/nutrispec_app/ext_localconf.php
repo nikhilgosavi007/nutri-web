@@ -9,7 +9,7 @@ call_user_func(
             'GroupProject.NutrispecApp',
             'Nutrispec',
             [
-                'Nutritionist' => 'list, show, new, create, edit, update, delete',
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, profile',
                 'Clients' => 'list, show, new, create, edit, update, delete',
                 'Blog' => 'list, show, new, create, edit, update, delete',
                 'Specialization' => 'list, show, new, create, edit, update, delete',
@@ -29,7 +29,7 @@ call_user_func(
             'GroupProject.NutrispecApp',
             'Nutrispec_Nutritionist_List',
             [
-                'Nutritionist' => 'list, show, new, create, edit, update, delete',
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, profile',
                 'Clients' => 'list, show, new, create, edit, update, delete',
                 'Blog' => 'list, show, new, create, edit, update, delete',
                 'Specialization' => 'list, show, new, create, edit, update, delete',
@@ -37,7 +37,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Nutritionist' => 'list, show, new, create, edit, update, delete',
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, profile',
                 'Clients' => 'list, show, new, create, edit, update, delete',
                 'Blog' => 'list, show, new, create, edit, update, delete',
                 'Specialization' => 'list, show, new, create, edit, update, delete',
@@ -50,14 +50,14 @@ call_user_func(
             'Nutrispec_Client_List',
             [
                 'Clients' => 'list, show, new, create, edit, update, delete',
-                'Nutritionist' => 'list, show, new, create, edit, update, delete',
-                'ClientReport' => 'list, show, new, create, edit, update, delete'
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, profile',
+                'ClientReport' => 'list, show, new, create, edit, update, delete, associate'
             ],
             // non-cacheable actions
             [
                 'Clients' => 'list, show, new, create, edit, update, delete',
-                'Nutritionist' => 'list, show, new, create, edit, update, delete',
-                'ClientReport' => 'list, show, new, create, edit, update, delete'
+                'Nutritionist' => 'list, show, new, create, edit, update, delete, profile',
+                'ClientReport' => 'list, show, new, create, edit, update, delete, associate'
             ]
         );
 
